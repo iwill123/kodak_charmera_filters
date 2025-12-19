@@ -4,6 +4,8 @@
 
 - 在线体验：<http://kodak.luckylt.com/>
 
+<img width="2856" height="1221" alt="ScreenShot_2025-12-19_113215_452" src="https://github.com/user-attachments/assets/3793f686-500b-4596-874a-b869280322c9" />
+
 ## 特性
 
 - 纯前端本地处理：图片不上传服务器，处理过程都在浏览器里完成
