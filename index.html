@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>仿柯达盲盒相机滤镜</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css?1=1">
+</head>
+<body>
+<div class="app">
+<header class="header">
+<h1>仿柯达盲盒相机滤镜</h1>
+<p>上传图片，选择滤镜颜色和阈值，生成二值化滤镜效果</p>
+</header>
+<main class="main">
+<section class="controls">
+<div class="field">
+<label for="fileInput">上传图片</label>
+<input id="fileInput" type="file" accept="image/*">
+</div>
+<div class="field">
+<label for="colorSelect">滤镜颜色</label>
+<select id="colorSelect">
+<option value="kodak">柯达经典黄</option>
+<option value="pureWhite">纯白</option>
+<option value="pureRed">纯红</option>
+<option value="pureBlue">纯蓝</option>
+<option value="pureGreen">纯绿</option>
+<option value="sunriseGold">日出暖金</option>
+<option value="sunsetOrange">日落橙红</option>
+<option value="amber">琥珀蜂蜜</option>
+<option value="cinnamon">肉桂复古棕</option>
+<option value="warmRed">胶片暖红</option>
+<option value="rose">玫瑰薄雾</option>
+<option value="sakura">樱花粉</option>
+<option value="forest">森林深绿</option>
+<option value="olive">橄榄青绿</option>
+<option value="mint">薄荷青</option>
+<option value="cyan">海湾青蓝</option>
+<option value="sky">晴空蓝</option>
+<option value="deepBlue">午夜深蓝</option>
+<option value="violet">暮光紫</option>
+<option value="lavender">薰衣草紫雾</option>
+<option value="magenta">霓虹洋红</option>
+<option value="sepia">老胶片棕调</option>
+</select>
+</div>
+<div class="field">
+<label for="colorPicker">自定义颜色</label>
+<input id="colorPicker" type="color" value="#ffc800">
+</div>
+<div class="field">
+<label for="thresholdRange">二值化阈值</label>
+<div class="slider-row">
+<input id="thresholdRange" type="range" min="0" max="255" value="140">
+<span id="thresholdValue">140</span>
+</div>
+</div>
+<div class="field">
+<label for="sharpnessRange">图像清晰度</label>
+<div class="slider-row">
+<input id="sharpnessRange" type="range" min="0" max="20" value="20">
+<span id="sharpnessValue">20</span>
+</div>
+</div>
+<div class="actions">
+<button id="resetButton">重置</button>
+<button id="randomButton">随机盲盒</button>
+<button id="downloadButton" disabled>下载图片</button>
+</div>
+</section>
+<section class="preview">
+<div class="preview-panel">
+<h2>原始图片</h2>
+<div class="preview-box">
+<img id="originalPreview" alt="">
+</div>
+</div>
+<div class="preview-panel">
+<h2>滤镜效果</h2>
+<div class="preview-box">
+<canvas id="resultCanvas"></canvas>
+</div>
+</div>
+</section>
+</main>
+</div>
+<div id="imageModal" class="image-modal">
+<div class="image-modal-inner">
+<img id="modalImage" alt="">
+</div>
+</div>
+<script src="script.js?1=1"></script>
+</body>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?06e1a76a154ecf8ef855f0051f9dbf45";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</html>
