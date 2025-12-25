@@ -13,6 +13,7 @@ const imageModal = document.getElementById("imageModal");
 const modalImage = document.getElementById("modalImage");
 const colorPicker = document.getElementById("colorPicker");
 const resetButton = document.getElementById("resetButton");
+const gotoCameraVersion = document.getElementById("gotoCameraVersion");
 
 let sourceImage = null;
 let processedDataUrl = "";
@@ -181,6 +182,12 @@ openImageModal(processedDataUrl);
 imageModal.addEventListener("click", () => {
 closeImageModal();
 });
+
+if (gotoCameraVersion) {
+gotoCameraVersion.addEventListener("click", () => {
+window.location.href = "/kodak_charmera_filters/";
+});
+}
 
 function fitCanvasToImage() {
 if (!sourceImage) {
